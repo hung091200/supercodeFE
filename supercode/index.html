@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="/controller/add.js"></script>
+<script src="/controller/detail.js"></script>
+<script src="/controller/list.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<body ng-app="myApp">
+
+
+<a href="#!shoe">List</a>
+<a href="#!shoe/add">Add</a>
+<a href="#!detail/shoe/:id">Detail</a>
+<div>
+    <button>ADD</button>
+</div>
+<div ng-view></div>
+
+<script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function ($routeProvider) {
+        $routeProvider
+            .when("/shoe", {
+                templateUrl: '/views/list.html',
+                controller: listCtrl
+            })
+            .when("/shoe/add", {
+                templateUrl: "/views/add.html",
+                controller: addCtrl
+            })
+            .when("/detail/shoe/:id", {
+                templateUrl: "/views/detail.html",
+                controller: detailCtrl
+            })
+
+    });
+</script>
+
+</body>
+</html>

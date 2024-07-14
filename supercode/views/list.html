@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Brand</td>
+        <td>SIZE</td>
+        <td>PRICE</td>
+        <td>ACTION</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="shoe in listShoe">
+        <td>{{shoe.id}}</td>
+        <td>{{shoe.ten}}</td>
+        <td>{{shoe.hang}}</td>
+        <td>{{shoe.size}}</td>
+        <td>{{shoe.gia}}</td>
+
+        <td>
+            <button><a href="#!/detail/shoe/{{shoe.id}}">Detail</a></button>
+            <button ng-click="onDelete(shoe.id)">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

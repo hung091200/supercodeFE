@@ -1,0 +1,25 @@
+{
+  "shoe": [
+    {
+      "id": "01",
+      "size": 22,
+      "ten": "giay dep vcd",
+      "hang": "nike",
+      "gia": 123123
+    },
+    {
+      "id": "1",
+      "size": "234",
+      "ten": "dit cu may",
+      "hang": "nike",
+      "gia": "123123"
+    },
+    {
+      "id": "dfg",
+      "ten": "java",
+      "hang": "nike",
+      "size": "435",
+      "gia": "534"
+    }
+  ]
+}
